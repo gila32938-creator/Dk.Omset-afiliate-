@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgPlate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Corporate Dark Base -->
+  <rect width="512" height="512" rx="96" fill="url(#bgPlate)" />
+  <rect x="16" y="16" width="480" height="480" rx="84" fill="none" stroke="#1e293b" stroke-width="4" stroke-opacity="0.8" />
+
+  <!-- Inner Architectural Financial Emblem -->
+  <!-- Outer Diamond / Shield Matrix -->
+  <g transform="translate(256, 230)">
+    <!-- Base geometric structural bars -->
+    <rect x="-140" y="-120" width="44" height="230" rx="6" fill="#f8fafc" />
+    <path d="M -96 -120 L -20 -120 C 40 -120 75 -85 75 -20 C 75 45 40 80 -20 80 L -96 80 Z" fill="none" stroke="#f8fafc" stroke-width="42" stroke-linejoin="round" />
+    
+    <!-- Emerald accent pillar symbolizing growth and revenue -->
+    <path d="M 20 -40 L 110 -120 L 145 -120 L 50 -35 L 145 70 L 105 70 Z" fill="url(#goldAccent)" />
+    
+    <!-- Ledger Base Line -->
+    <rect x="-150" y="125" width="300" height="8" rx="4" fill="#334155" />
+    <rect x="-90" y="125" width="180" height="8" rx="4" fill="#10b981" />
+  </g>
+
+  <!-- Financial typography badge -->
+  <text x="256" y="420" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="28" font-weight="800" text-anchor="middle" letter-spacing="6">DK MANAGER</text>
+  <text x="256" y="450" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="4">FINANCIAL SYSTEM</text>
+</svg>

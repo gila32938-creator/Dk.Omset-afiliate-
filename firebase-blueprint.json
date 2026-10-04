@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and preferences",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 256 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "createdAt": { "type": "string" },
+        "theme": { "type": "string", "enum": ["light", "dark", "system"] }
+      },
+      "required": ["userId", "email"]
+    },
+    "AffiliateAccount": {
+      "title": "AffiliateAccount",
+      "description": "User TikTok Affiliate accounts",
+      "type": "object",
+      "properties": {
+        "accountId": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "accountName": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "active": { "type": "boolean" },
+        "order": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["accountId", "userId", "accountName", "active"]
+    },
+    "IncomeRecord": {
+      "title": "IncomeRecord",
+      "description": "Daily gross income record per affiliate account",
+      "type": "object",
+      "properties": {
+        "transactionId": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "affiliateAccountId": { "type": "string", "maxLength": 128 },
+        "accountName": { "type": "string", "maxLength": 100 },
+        "date": { "type": "string", "maxLength": 20 },
+        "day": { "type": "string", "maxLength": 20 },
+        "month": { "type": "string", "maxLength": 20 },
+        "year": { "type": "number" },
+        "weekStart": { "type": "string", "maxLength": 20 },
+        "weekEnd": { "type": "string", "maxLength": 20 },
+        "amount": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["transactionId", "userId", "affiliateAccountId", "date", "amount"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile and settings"
+    },
+    "/affiliateAccounts/{accountId}": {
+      "schema": "AffiliateAccount",
+      "description": "User TikTok Affiliate accounts"
+    },
+    "/incomes/{transactionId}": {
+      "schema": "IncomeRecord",
+      "description": "User daily gross income records"
+    }
+  }
+}

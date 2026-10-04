@@ -1,0 +1,8 @@
+{
+  "name": "DK AFFILIATE MANAGER PRO",
+  "description": "Aplikasi profesional pencatat, penghitung, dan penganalisis penghasilan kotor TikTok Affiliate harian, mingguan, dan bulanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
